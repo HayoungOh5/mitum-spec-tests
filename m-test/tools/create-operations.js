@@ -94,13 +94,14 @@ export function createAccounts({
 	log(`bash bash/run-jmeter.sh --api=http://localhost:54320 --data=${baseDir}/${subDir}/create-accounts`)
 }
 
-export function createCredentials({
-									  networkID,
-									  cid,
-									  total,
-									  items,
-									  baseDir,
-									  subDir,
+export function createCredentials({	
+	endpoint,
+	networkID,
+	cid,
+	total,
+	items,
+	baseDir,
+	subDir,
 }) {
 	ensureDirSync(`${baseDir}/${subDir}/assign-credential/ops/`);
 	log(`folder ${baseDir}/${subDir}/assign-credential/ops created`);
